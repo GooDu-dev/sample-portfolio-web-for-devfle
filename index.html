@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .intro-section {
+      margin-top: 50px;
+    }
+    .card-img-top {
+      /*object-fit: cover;*/
+      /*height: 200px;*/
+    }
+    .form-section {
+      margin-top: 50px;
+      padding-bottom: 50px;
+    }
+    a{
+        text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- INTRODUCTION -->
+  <div class="container intro-section">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <img src="devfle_logo_profile.png" class="img-fluid rounded" alt="Profile">
+      </div>
+      <div class="col-md-6">
+        <h1>Hello, I'm Devfle</h1>
+        <p>
+          Welcome to my portfolio! I'm a passionate developer who loves to build web applications and explore new technologies.
+        </p>
+        <p>
+          My skills include HTML, CSS, JavaScript, and working with modern frameworks. Check out some of my past activities below.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- PAST ACTIVITIES -->
+  <div class="container mt-5">
+    <h2 class="text-center mb-4">Past Activities</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <a href="https://www.instagram.com/p/DLFHU4xJQxt/?img_index=1">
+            <div class="card">
+              <img src="./1.png" class="card-img-top" alt="Project 1">
+              <div class="card-body">
+                <h5 class="card-title">LDAP</h5>
+                <p class="card-text">LDAP มีชื่อเต็มว่า Light Weight Directory Access Protocol แต่เอาจริงนะ ช่างหัวชื่อเต็มเถอะ   จริง ๆ แล้วหลักการการทำงานของ LDAP คือ การที่เราเก็บข้อมูลเป็นกลุ่มคล้าย Folder ที่เราสร้างเพื่อเก็บไฟล์บนคอมพิวเตอร์นั่นแหละ</p>
+              </div>
+            </div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="https://www.instagram.com/p/DKPCyHNhk2f/">
+            <div class="card">
+              <img src="./3.png" class="card-img-top" alt="Project 2">
+              <div class="card-body">
+                <h5 class="card-title">Java scanner quiz</h5>
+                <p class="card-text">สำหรับน้อง ๆ ที่ได้ลองภาษายอดฮิตอย่าง Java น้อง ๆ เคยได้ลองรับค่าตัวเลขกับตัวหนังสือในภาษา Java ไหมครับ วันนี้พี่เดลอยากมานำเสนอถึงความตลกของการรับค่าในภาษา Java ครับ ถ้าพร้อมแล้วเราไปดูกันเลย !!</p>
+              </div>
+            </div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="https://www.instagram.com/p/DJq_hBasqEp/?img_index=1">
+            <div class="card">
+              <img src="./2.png" class="card-img-top" alt="Project 3">
+              <div class="card-body">
+                <h5 class="card-title">Docker</h5>
+                <p class="card-text">น้อง ๆ เคยเห็นเจ้าโลโก้สีฟ้ารูปวาฬไหมครับ มันมีชื่อว่า Docker และมีหน้าที่สำคัญมาก ๆ ในการพัฒนาโปรแกรมขึ้นมาในยุคปัจจุบัน ถ้าพร้อมแล้วไปดูกัน!!!!</p>
+              </div>
+            </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTACT FORM -->
+  <div class="container form-section">
+    <h2 class="text-center mb-4">Contact Me</h2>
+    <form id="contactForm">
+      <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" class="form-control" id="name" placeholder="Your full name" required>
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
+      </div>
+      <div class="mb-3">
+        <label for="message" class="form-label">Message</label>
+        <textarea class="form-control" id="message" rows="4" placeholder="Say hello..." required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Send</button>
+      <div id="formMsg" class="mt-3 text-success" style="display: none;">
+        ✅ Your message has been sent!
+      </div>
+    </form>
+  </div>
+
+  <script>
+    const form = document.getElementById("contactForm");
+    const msg = document.getElementById("formMsg");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const message = document.getElementById("message").value.trim();
+
+      if (name !== "" && email !== "" && message !== "") {
+        msg.style.display = "block";
+        form.reset();
+      }
+    });
+  </script>
+
+</body>
+</html>
